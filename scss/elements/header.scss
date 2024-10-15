@@ -1,0 +1,39 @@
+@import '../global/variables.scss';
+
+header {
+    width: 100%;
+    background-color: white;
+
+    .header {
+        display: flex;
+        justify-content: space-between;
+        width: 1170px;
+        margin: 0 auto;
+
+        .title-and-menu {
+            display: flex;
+            justify-content: space-around;
+
+            h1 {
+                span {
+                    color: $dark-blue;
+                }
+            }
+
+            .menu {
+                padding-top: 14px;
+            }
+        }
+
+        .info {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 32px;
+
+            p {
+                font-weight: 500;
+                margin: 0 25px;
+            }
+        }
+    }
+}

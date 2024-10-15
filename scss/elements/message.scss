@@ -1,0 +1,102 @@
+@import '../global/variables';
+
+.button {
+    background-color: $middle-dark-blue;
+    border-radius: 5px;
+    border: none;
+    height: 3lh;
+    width: 175px;
+    font-weight: bold;
+    color: white;
+    margin: 0 auto;
+
+    .clickable {
+        cursor: pointer;
+        position: relative;
+        top: 18px;
+        text-decoration: none;
+    }
+
+    &:hover {
+        background-color: $dark-blue;
+        cursor: pointer;
+    }
+}
+
+.message {
+    position: fixed;
+    background-color: white;
+    padding: 50px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 528px;
+    height: 581px;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    z-index: 21;
+
+    label {
+        color: $black;
+    }
+
+    input {
+        width: 448px;
+        height: 40px;
+        margin: 0 auto;
+    }
+
+    #comment {
+        field-sizing: content;
+        width: 448px;
+        height: 120px;
+        margin-top: 10px;
+    }
+
+    #agree {
+        width: 15px;
+        height: 15px;
+    }
+
+    .submit {
+        cursor: pointer;
+        width: 150px;
+        height: 40px;
+        margin-top: 5%;
+        background-color: #777777;
+        border: none;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+.back-black {
+    position: fixed;
+    z-index: 9;
+    background-color: $black;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    visibility: hidden;
+    transition: opacity 0.5s ease;
+    opacity: 0;
+}
+
+#click-check, #close-check {
+    display: none;
+}
+
+#click-check:checked ~ .message {
+    visibility: visible;
+    opacity: 1;
+    overflow: visible;
+}
+
+#click-check:checked ~ .back-black {
+    visibility: visible;
+    opacity: 0.65;
+}

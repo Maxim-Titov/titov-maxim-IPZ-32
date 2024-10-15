@@ -1,0 +1,90 @@
+@import '../global/variables.scss';
+
+footer {
+    width: 100%;
+    background-color: $second-back-color;
+
+    .footer {
+        width: 1170px;
+        margin: 0 auto;
+        color: $white;
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            .title {
+                span {
+                    color: $dark-blue;
+                }
+            }
+
+            .contacts {
+                a {
+                    color: gray;
+
+                    &:hover {
+                        color: $dark-blue;
+                    }
+                }
+            }
+
+            .links {
+                svg {
+                    .back {
+                        fill: $gray;
+                        fill-opacity: 0.1;
+                    }
+
+                    g {
+                        & > path {
+                            fill: $white;
+                        }
+                    }
+
+                    &:hover {
+                        g {
+                            & > path {
+                                fill: $white;
+                            }
+                        }
+
+                        .back {
+                            fill: $blue;
+                            fill-opacity: 1;
+                        }
+                    }
+                }
+            }
+
+            form {
+                input {
+                    width: 350px;
+                    height: 3lh;
+                    border: 1px solid gray;
+                    border-radius: 5px;
+                    background-color: $black-with-zero-opacity;
+                    color: gray;
+                    padding-left: 10px;
+                    font-size: 15px;
+                }
+
+                button {
+                    width: 200px;
+                    height: 3lh;
+                    background-color: $blue;
+                    border: none;
+                    border-radius: 5px;
+                    color: white;
+                    font-weight: bold;
+                    margin-left: 15px;
+                    font-size: 15px;
+
+                    &:hover {
+                        cursor: pointer;
+                        background-color: $middle-dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}
