@@ -1,0 +1,83 @@
+@import '../global/variables.scss';
+@import '../global/mixin.scss';
+
+footer {
+    .galery {
+        display: flex;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            margin: 0;
+        }
+    }
+
+    .container {
+        margin: 0 auto;
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $gray-dark;
+            padding: 100px 0 50px 0;
+
+            .left-block {
+                h4 {
+                    color: $white;
+                }
+            }
+
+            .center-block {
+                width: 405px;
+                display: flex;
+                justify-content: space-between;
+
+                nav {
+                    ul {
+                        @include li-reset;
+
+                        li {
+                            a {
+                                color: $white;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .right-block {
+                a {
+                    text-decoration: none;
+
+                    svg {
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+            
+            .left-block {
+                p {
+                    color: $gray;
+                }
+            }
+
+            .right-block {
+                a {
+                    color: $white;
+                    text-decoration: none;
+
+                    &:last-child {
+                        margin-left: 80px;
+                    }
+                }
+            }
+        }
+    }
+}

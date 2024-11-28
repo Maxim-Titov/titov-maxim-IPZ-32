@@ -1,0 +1,51 @@
+@import '../global/variables.scss';
+
+#gabriel-pires-2 {
+    background-color: $pink-light;
+    padding: 150px 0 100px 0;
+    
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-block {
+            & > * {
+                margin-bottom: $gutter;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .title {
+                color: $brown;
+                width: 368px;
+            }
+
+            p {
+                width: 470px;
+            }
+
+            form {
+                button {
+                    width: 154px;
+                    height: 48px;
+                    background-color: $red-light;
+                    color: $white;
+                    border: none;
+                    border-radius: 7px;
+                    text-transform: uppercase;
+                    font-weight: bold;
+                    font-size: 14px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $red;
+                    }
+                }
+            }
+        }
+    }
+}

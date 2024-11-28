@@ -1,0 +1,54 @@
+@import '../global/variables.scss';
+
+#features {
+    padding: 150px 0;
+
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-block {
+            & > * {
+                margin-bottom: $gutterM;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .title {
+                color: $white;
+                width: 397px;
+            }
+
+            .content {
+                font-size: 20px;
+                line-height: 32px;
+                color: $white;
+                width: 470px;
+            }
+
+            .check-block {
+                &-content {
+                    display: flex;
+                    margin-bottom: 15px;
+
+                    svg {
+                        margin-right: 15px;
+                    }
+
+                    p {
+                        color: $gray;
+                        padding-top: 2px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

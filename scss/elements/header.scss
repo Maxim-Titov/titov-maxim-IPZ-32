@@ -1,0 +1,64 @@
+@import '../global/variables.scss';
+@import '../global/mixin.scss';
+
+header {
+    color: $white;
+    position: fixed;
+    background-color: $purple;
+    width: 100%;
+    z-index: 9999;
+
+    .container {
+        padding: $gutterM 0;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .menu {
+            nav {
+                ul {
+                    @include li-reset;
+
+                    display: flex;
+
+                    li {
+                        margin-right: 100px;
+                        line-height: 32px;
+                        font-size: 16px;
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        a {
+                            color: $white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+
+        .contact {
+            form {
+                button {
+                    width: 138px;
+                    height: 48px;
+                    background-color: rgba($white, 0);
+                    border: 1px solid $gray;
+                    border-radius: 7px;
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: rgba($gray, 0.5);
+                    }
+                }
+            }
+        }
+    }
+}

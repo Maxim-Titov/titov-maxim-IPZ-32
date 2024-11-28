@@ -1,0 +1,141 @@
+@import '../global/variables.scss';
+
+#contact {
+    padding: 150px 0;
+
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        & > div {
+            width: 50%;
+        }
+
+        .left-block {
+            .form-body {
+                background-color: $white;
+                width: 570px;
+                padding: 45px;
+                border-radius: 7px;
+
+                h4 {
+                    color: $brown;
+                    margin-bottom: $gutter;
+                }
+
+                form {
+                    position: relative;
+                    padding-bottom: $gutter;
+
+                    input {
+                        width: 474px;
+                        height: 48px;
+                        margin-bottom: $gutterM;
+                        padding-left: 15px;
+                        border-radius: 7px;
+                        border: 1px solid $pink;
+                        color: $brown-light;
+                        font-size: 16px;
+                        line-height: 32px;
+
+                        &::placeholder {
+                            color: $brown-light;
+                        }
+                    }
+                    
+                    select {
+                        appearance: none; /* Для сучасних браузерів */
+                        -webkit-appearance: none; /* Для Safari */
+                        -moz-appearance: none; /* Для Firefox */
+                        width: 474px;
+                        height: 48px;
+                        margin-bottom: $gutterM;
+                        padding-left: 15px;
+                        padding-right: 30px;
+                        border-radius: 7px;
+                        border: 1px solid $pink;
+                        background-color: $white;
+                        color: $brown-light;
+                        font-size: 16px;
+                        line-height: 32px;
+                        background: transparent url('../images/contact/Triangle.png') no-repeat right 15px center;
+                        background-size: 10px 6px;
+                    }
+                    
+                    textarea {
+                        width: 474px;
+                        height: 128px;
+                        margin-bottom: $gutter;
+                        padding-left: 15px;
+                        padding-top: 10px;
+                        border-radius: 7px;
+                        border: 1px solid $pink;
+                        color: $brown-light;
+                        font-size: 16px;
+                        line-height: 32px;
+                        resize: none;
+
+                        &::placeholder {
+                            color: $brown-light;
+                        }
+                    }
+
+                    button {
+                        width: 154px;
+                        height: 48px;
+                        background-color: $red-light;
+                        color: $white;
+                        border: none;
+                        border-radius: 7px;
+                        font-weight: bold;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        cursor: pointer;
+                        position: absolute;
+                        right: 0;
+
+                        &:hover {
+                            background-color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right-block {
+            padding-left: 100px;
+
+            .sub-title {
+                margin-bottom: $gutter;
+            }
+
+            .title {
+                color: $white;
+                margin-bottom: $gutter;
+            }
+
+            p {
+                color: $gray;
+                margin-bottom: $gutter;
+            }
+
+            .contact-info {
+                .row {
+                    display: flex;
+
+                    svg {
+                        margin-right: 15px;
+                    }
+                    
+                    p {
+                        font-size: 20px;
+                        line-height: 32px;
+                        color: $white;
+                        padding-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

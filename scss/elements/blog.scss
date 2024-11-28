@@ -1,0 +1,120 @@
+@import '../global/variables.scss';
+
+#blog {
+    background-color: $pink-light;
+    padding: 100px 0 75px 0;
+
+    .container {
+        margin: 0 auto;
+
+        .block {
+            &-header {
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+                margin-bottom: 50px;
+
+                .block-title {
+                    .title {
+                        width: 318px;
+                        color: $brown;
+                        margin-top: $gutter;
+                    }
+                }
+
+                form {
+                    position: absolute;
+                    bottom: 0;
+                    right: 0;
+
+                    button {
+                        width: 170px;
+                        height: 48px;
+                        background-color: $white;
+                        border: none;
+                        border-radius: 7px;
+                        color: $brown;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgba($gray, 0.5);
+                        }
+                    }
+                }
+            }
+
+            &-content {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 50px;
+
+                .left-block {
+                    width: 770px;
+                }
+
+                .right-block {
+                    width: 270px;
+                }
+
+                .category {
+                    color: $brown;
+                    margin-top: $gutterM;
+                }
+
+                .post-title {
+                    color: $brown;
+                    margin: $gutterM 0;
+                }
+            }
+
+            &-footer {
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                &-content {
+                    h4 {
+                        color: $brown;
+                    }
+                }
+
+                form {
+                    input {
+                        width: 370px;
+                        height: 48px;
+                        border: 1px solid $pink;
+                        border-radius: 7px;
+                        padding: 15px;
+                        font-size: 16px;
+                        margin-right: $gutter;
+                    }
+
+                    button {
+                        width: 170px;
+                        height: 48px;
+                        background-color: $white;
+                        border: none;
+                        border-radius: 7px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        color: $brown;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgba($gray, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .blog-line {
+            background-color: $pink;
+            border: none;
+            height: 1px;
+        }
+    }
+}
