@@ -48,7 +48,112 @@ header .container .contact form button {
 header .container .contact form button:hover {
   background-color: rgba(179, 176, 186, 0.5);
 }
+header .container .hamburger-menu {
+  display: none;
+}
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  header .container {
+    padding: 20px 20px !important;
+  }
+  header .container .menu, header .container .contact {
+    display: none;
+  }
+  header .container .hamburger-menu {
+    display: block;
+  }
+  header .container .hamburger-menu #menu__toggle {
+    display: none;
+  }
+  header .container .hamburger-menu #menu__toggle:checked ~ .menu__btn span {
+    transform: rotate(45deg);
+  }
+  header .container .hamburger-menu #menu__toggle:checked ~ .menu__btn span::before {
+    top: 0;
+    transform: rotate(0);
+  }
+  header .container .hamburger-menu #menu__toggle:checked ~ .menu__btn span::after {
+    top: 0;
+    transform: rotate(90deg);
+    width: 35px;
+  }
+  header .container .hamburger-menu #menu__toggle:checked ~ .menu__box {
+    visibility: visible;
+    top: 0;
+  }
+  header .container .hamburger-menu .menu__btn {
+    display: flex;
+    align-items: center;
+    right: 12px;
+    top: 3.5px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+  }
+  header .container .hamburger-menu .menu__btn span {
+    right: 0.5px;
+  }
+  header .container .hamburger-menu .menu__btn span::before {
+    content: "";
+    top: -8px;
+  }
+  header .container .hamburger-menu .menu__btn span::after {
+    width: 17.5px;
+    content: "";
+    top: 8px;
+  }
+  header .container .hamburger-menu .menu__btn span,
+  header .container .hamburger-menu .menu__btn span::before,
+  header .container .hamburger-menu .menu__btn span::after {
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 5px;
+    background-color: #fff;
+    transition-duration: 0.25s;
+    border-radius: 3px;
+    margin-right: 20px;
+    z-index: 20;
+  }
+  header .container .hamburger-menu .menu__box {
+    display: block;
+    position: absolute;
+    visibility: hidden;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 35px 25px 0 25px;
+    list-style: none;
+    text-align: center;
+    background-color: #2b233e;
+    transition-duration: 0.25s;
+    z-index: 19;
+  }
+  header .container .hamburger-menu .menu__box-menu nav {
+    padding-top: 120px;
+  }
+  header .container .hamburger-menu .menu__box-menu nav ul {
+    padding: 0;
+    margin: 0;
+    align-items: center !important;
+  }
+  header .container .hamburger-menu .menu__box-menu nav ul li {
+    list-style: none;
+  }
+  header .container .hamburger-menu .menu__box-menu nav ul li a {
+    display: block;
+    padding: 15px 24px 15px 0;
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration: none;
+    transition-duration: 0.25s;
+    text-transform: uppercase;
+    color: #fff;
+  }
+}
 #hero {
   padding-top: 50px;
 }
@@ -94,6 +199,56 @@ header .container .contact form button:hover {
   background-color: #ff5352;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  #hero .container {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+  }
+  #hero .container .left-block {
+    padding: 30px 0 0 0;
+    width: 100%;
+    order: 2;
+  }
+  #hero .container .left-block .sub-title {
+    margin: 0 0 10px 0;
+  }
+  #hero .container .left-block .title {
+    margin: 10px 0;
+    color: #fff;
+  }
+  #hero .container .left-block .content {
+    margin: 10px 0 0 0;
+    color: #b3b0ba;
+  }
+  #hero .container .left-block .content form {
+    margin-top: 30px;
+  }
+  #hero .container .left-block .content form button {
+    width: 154px;
+    height: 48px;
+    background-color: #EF6D58;
+    color: #fff;
+    border: none;
+    border-radius: 7px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  #hero .container .left-block .content form button:hover {
+    background-color: #ff5352;
+  }
+  #hero .container .right-block {
+    width: 100%;
+    order: 1;
+  }
+  #hero .container .right-block svg {
+    width: 100%;
+    height: 100%;
+  }
+}
 #service {
   background-color: #fff0e9;
   padding: 100px 0;
@@ -172,6 +327,29 @@ header .container .contact form button:hover {
   text-decoration: none;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  #service .container {
+    padding: 0 20px;
+  }
+  #service .container .sub-title {
+    margin: 0 0 10px 0;
+  }
+  #service .container .title {
+    width: 100%;
+  }
+  #service .container .content {
+    display: block;
+    padding: 30px 0;
+  }
+  #service .container .content .left-block, #service .container .content .right-block {
+    padding: 25px;
+  }
+  #service .container .content .right-block {
+    border-top: none;
+    border-left: 1px solid #fbd0be;
+  }
+}
 #portfolio {
   padding: 100px 0 75px 0;
 }
@@ -240,6 +418,29 @@ header .container .contact form button:hover {
   width: 116px;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  #portfolio {
+    padding: 75px 0 50px 0;
+  }
+  #portfolio .container .head {
+    display: block;
+    padding: 0 20px 50px 20px;
+  }
+  #portfolio .container .content {
+    display: block;
+  }
+  #portfolio .container .content .left img, #portfolio .container .content .center img, #portfolio .container .content .right img {
+    width: 100%;
+  }
+  #portfolio .container .content .left .block-content, #portfolio .container .content .center .block-content, #portfolio .container .content .right .block-content {
+    left: 40px;
+    bottom: 40px;
+  }
+  #portfolio .container .content .left .block-content h3, #portfolio .container .content .center .block-content h3, #portfolio .container .content .right .block-content h3 {
+    margin-top: 10px;
+  }
+}
 #gabriel-pires {
   background-color: #fff0e9;
   padding: 175px 0 125px 0;
@@ -322,6 +523,46 @@ header .container .contact form button:hover {
   border-bottom: 1px solid #fbd0be;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  #gabriel-pires {
+    padding: 100px 0 100px 0;
+  }
+  #gabriel-pires .container {
+    padding: 0 20px;
+  }
+  #gabriel-pires .container .content {
+    display: block;
+    margin-bottom: 100px;
+  }
+  #gabriel-pires .container .content .left-block, #gabriel-pires .container .content .right-block {
+    width: 100%;
+  }
+  #gabriel-pires .container .content .left-block svg {
+    width: 100%;
+    height: auto;
+  }
+  #gabriel-pires .container .my-statistic {
+    display: block;
+  }
+  #gabriel-pires .container .my-statistic .left-block, #gabriel-pires .container .my-statistic .right-block {
+    width: 100%;
+    padding: 30px 20px;
+  }
+  #gabriel-pires .container .my-statistic .left-block svg, #gabriel-pires .container .my-statistic .left-block .static, #gabriel-pires .container .my-statistic .right-block svg, #gabriel-pires .container .my-statistic .right-block .static {
+    width: 50%;
+  }
+  #gabriel-pires .container .my-statistic .left-block svg, #gabriel-pires .container .my-statistic .right-block svg {
+    margin: 0;
+  }
+  #gabriel-pires .container .my-statistic .left-block .static, #gabriel-pires .container .my-statistic .right-block .static {
+    padding-left: 10px;
+  }
+  #gabriel-pires .container .my-statistic .right-block {
+    border-top: none;
+    border-left: 1px solid #fbd0be;
+  }
+}
 #features {
   padding: 150px 0;
 }
@@ -362,6 +603,32 @@ header .container .contact form button:hover {
   margin-bottom: 0;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  #features {
+    padding: 75px 0 150px 0;
+  }
+  #features .container {
+    padding: 0 20px;
+    flex-direction: column;
+  }
+  #features .container .left-block {
+    order: 2;
+  }
+  #features .container .left-block .title {
+    width: auto;
+  }
+  #features .container .left-block .content {
+    width: auto;
+  }
+  #features .container .right-block {
+    order: 1;
+  }
+  #features .container .right-block svg {
+    width: 100%;
+    height: auto;
+  }
+}
 #get-started {
   padding: 50px 0;
   background-color: #F9E5DA;
@@ -412,6 +679,33 @@ header .container .contact form button:hover {
   width: 370px;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  #get-started {
+    padding: 100px 0 30px 0;
+  }
+  #get-started .container {
+    padding: 0 20px;
+    display: block;
+  }
+  #get-started .container .price-icon {
+    left: 20px;
+    transform: translateY(45%);
+  }
+  #get-started .container .left-block {
+    margin-bottom: 50px;
+  }
+  #get-started .container .right-block {
+    display: block;
+  }
+  #get-started .container .right-block p {
+    width: auto;
+  }
+  #get-started .container .right-block svg {
+    width: 100%;
+    height: auto;
+  }
+}
 #testimonials {
   padding: 100px 0 75px 0;
   background-color: #fff0e9;
@@ -969,4 +1263,23 @@ h5 {
   color: #f06767;
   padding-left: 15px;
   font-style: italic;
+}
+
+/*------------------------------------------------------------------*/
+@media (max-width: 425px) {
+  h1 {
+    font-size: 49px;
+    letter-spacing: -1px;
+    line-height: 60px;
+  }
+  h2 {
+    font-size: 38px;
+    letter-spacing: 0;
+    line-height: 48px;
+  }
+  h3 {
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 32px;
+  }
 }

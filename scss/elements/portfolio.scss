@@ -97,3 +97,37 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #portfolio {
+        padding: 75px 0 50px 0;
+
+        .container {
+            .head {
+                display: block;
+                padding: 0 $gutterM 50px $gutterM;
+            }
+
+            .content {
+                display: block;
+
+                .left, .center, .right {
+                    img {
+                        width: 100%;   
+                    }
+
+                    .block-content {
+                        left: 40px;
+                        bottom: 40px;    
+
+                        h3 {
+                            margin-top: $gutterS;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

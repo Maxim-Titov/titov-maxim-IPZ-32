@@ -97,3 +97,41 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #service {
+        .container {
+            padding: 0 $gutterM;
+
+            .sub-title {
+                margin: 0 0 $gutterS 0;
+            }
+
+            .title {
+                width: 100%;
+            }
+
+            .content {
+                display: block;
+                padding: $gutter 0;
+
+                .left-block, .right-block {
+                    padding: 25px;
+
+                    .block-title {
+                        svg {
+                            
+                        }
+                    }
+                }
+
+                .right-block {
+                    border-top: none;
+                    border-left: 1px solid $pink;
+                }
+            }
+        }
+    }
+}

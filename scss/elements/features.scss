@@ -52,3 +52,37 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #features {
+        padding: 75px 0 150px 0;
+
+        .container {
+            padding: 0 $gutterM;
+            flex-direction: column;
+            
+            .left-block {
+                order: 2;
+                
+                .title {
+                    width: auto;
+                }
+
+                .content {
+                    width: auto;
+                }
+            }
+
+            .right-block {
+                order: 1;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

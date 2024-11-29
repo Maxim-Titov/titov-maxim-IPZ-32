@@ -62,3 +62,38 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #get-started {
+        padding: 100px 0 $gutter 0;
+
+        .container {
+            padding: 0 $gutterM;
+            display: block;
+
+            .price-icon {
+                left: $gutterM;
+                transform: translateY(45%);
+            }
+
+            .left-block {
+                margin-bottom: 50px;
+            }
+
+            .right-block {
+                display: block;
+
+                p {
+                    width: auto;
+                }
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

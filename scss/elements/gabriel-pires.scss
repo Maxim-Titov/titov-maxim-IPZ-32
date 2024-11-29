@@ -101,3 +101,57 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #gabriel-pires {
+        padding: 100px 0 100px 0;
+
+        .container {
+            padding: 0 $gutterM;
+
+            .content {
+                display: block;
+                margin-bottom: 100px;
+
+                .left-block, .right-block {
+                    width: 100%;
+                }
+
+                .left-block {
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .my-statistic {
+                display: block;
+
+                .left-block, .right-block {
+                    width: 100%;
+                    padding: $gutter $gutterM;
+
+                    svg, .static {
+                        width: 50%;
+                    }
+
+                    svg {
+                        margin: 0;
+                    }
+
+                    .static {
+                        padding-left: $gutterS;
+                    }
+                }
+
+                .right-block {
+                    border-top: none;
+                    border-left: 1px solid $pink;
+                }
+            }
+        }
+    }
+}
