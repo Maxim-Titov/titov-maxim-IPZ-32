@@ -100,3 +100,50 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #testimonials {
+        .container {
+            padding: 0 $gutterM;
+
+            .title {
+                width: auto;
+            }
+
+            .content {
+                display: block;
+                margin: $gutter 0 50px 0;
+
+                & > div {
+                    width: 100%;
+                    height: auto !important;
+                    padding: 50px $gutter;
+
+                    p {
+                        width: auto;
+                    }
+                }
+
+                .left-block {
+                    border-top: 1px solid $pink;
+                    border-bottom: none;
+                    border-left: 1px solid $pink;
+                    border-right: 1px solid $pink;
+                }
+    
+                .center-block {
+                    border: 1px solid $pink;
+                }
+    
+                .right-block {
+                    border-top: none;
+                    border-bottom: 1px solid $pink;
+                    border-right: 1px solid $pink;
+                    border-left: 1px solid $pink;
+                }
+            }
+        }
+    }
+}

@@ -106,3 +106,35 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #faq {
+        padding-top: 100px;
+
+        .container {
+            padding: 0 $gutterM;
+
+            .content {
+                display: block;
+
+                .left-block {
+                    .title, .content {
+                        width: auto;
+                    }
+                }
+
+                .right-block {
+                    .accordion {
+                        width: 100%;
+
+                        &-header, &-content {
+                            padding: $gutterM;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

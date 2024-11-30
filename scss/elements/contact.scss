@@ -139,3 +139,66 @@
         }
     }
 }
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #contact {
+        padding: 75px 0 50px 0;
+
+        .container {
+            padding: 0 $gutterM;
+            display: block;
+
+            .left-block, .right-block {
+                width: 100%;
+            }
+
+            .left-block {
+                margin-bottom: 50px;
+
+                .form-body {
+                    width: 100%;
+                    padding: $gutterM;
+
+                    form {
+                        input, select, textarea {
+                            width: 100%;
+                        }
+
+                        button {
+                            width: 154px;
+                        }
+                    }
+                }
+            }
+
+            .right-block {
+                padding: 0;
+
+                .sub-title {
+                    margin-bottom: $gutterM;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 320px) {
+    #contact {
+        .container {
+            .right-block {
+                .contact-info {
+                    .row {
+                        p {
+                            font-size: 15px;
+                            line-height: 25px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
