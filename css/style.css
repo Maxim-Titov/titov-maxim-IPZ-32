@@ -1350,6 +1350,16 @@ footer .container .copyright .right-block a:last-child {
 }
 
 /*------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  footer .galery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+  }
+}
+/*------------------------------------------------------------------*/
 @media (max-width: 425px) {
   footer .galery {
     display: grid;
@@ -1410,6 +1420,7 @@ html, body {
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 88px;
 }
 
 body {
@@ -1481,6 +1492,24 @@ h5 {
   font-style: italic;
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 1220px) {
+  #portfolio img,
+  #blog img,
+  footer img {
+    width: 100%;
+  }
+  #hero svg,
+  #gabriel-pires svg,
+  #gabriel-pires-2 svg {
+    width: 100%;
+    height: auto;
+  }
+  #features .container .right-block svg {
+    width: 100%;
+    height: auto;
+  }
+}
 /*------------------------------------------------------------------*/
 @media (max-width: 425px) {
   h1 {
