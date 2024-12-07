@@ -37,11 +37,13 @@
                     display: flex;
 
                     img {
-                        border-radius: 100%;
-                        margin-right: 25px;
+                        border-radius: 50%;
+                        height: 80px;
                     }
 
                     .about {
+                        padding-left: 25px;
+                        
                         p {
                             &:first-child {
                                 font-size: 24px;
@@ -103,7 +105,7 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
     #testimonials {
         .container {
             padding: 0 $gutterM;

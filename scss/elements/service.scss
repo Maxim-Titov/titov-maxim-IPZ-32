@@ -100,11 +100,19 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
     #service {
         .container {
             padding: 0 $gutterM;
+        }
+    }
+}
 
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #service {
+        .container {
             .sub-title {
                 margin: 0 0 $gutterS 0;
             }
@@ -119,12 +127,6 @@
 
                 .left-block, .right-block {
                     padding: 25px;
-
-                    .block-title {
-                        svg {
-                            
-                        }
-                    }
                 }
 
                 .right-block {

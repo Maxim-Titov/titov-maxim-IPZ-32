@@ -109,7 +109,7 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
     #faq {
         padding-top: 100px;
 
@@ -119,12 +119,6 @@
             .content {
                 display: block;
 
-                .left-block {
-                    .title, .content {
-                        width: auto;
-                    }
-                }
-
                 .right-block {
                     .accordion {
                         width: 100%;
@@ -132,6 +126,22 @@
                         &-header, &-content {
                             padding: $gutterM;
                         }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #faq {
+        .container {
+            .content {
+                .left-block {
+                    .title, .content {
+                        width: auto;
                     }
                 }
             }

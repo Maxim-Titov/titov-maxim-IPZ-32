@@ -55,12 +55,21 @@
 
 /*------------------------------------------------------------------*/
 
+@media(max-width: 768px) {
+    #features {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
 @media(max-width: 425px) {
     #features {
         padding: 75px 0 150px 0;
 
         .container {
-            padding: 0 $gutterM;
             flex-direction: column;
             
             .left-block {

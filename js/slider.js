@@ -8,18 +8,18 @@ $(document).ready(function() {
         speed: 3000,
         cssEase: 'linear',
         slidesToShow: 4,
-        mobileFirst: true,
         responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    slidesToShow: 2
-                }
-            },
             {
                 breakpoint: 425,
                 settings: {
                     slidesToShow: 1
+                }
+            },
+
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 2
                 }
             }
         ]

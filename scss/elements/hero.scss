@@ -56,12 +56,13 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
     #hero {
         .container {
+            padding: 50px $gutterM;
             display: flex;
             flex-direction: column;
-            padding: $gutter $gutterM;
+            text-align: center;
 
             .left-block {
                 padding: $gutter 0 0 0;
@@ -105,6 +106,21 @@
             }
 
             .right-block {
+                margin: 0 auto;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #hero {
+        .container {
+            text-align: left;
+
+            .right-block {
+                margin: 0;
                 width: 100%;
                 order: 1;
 

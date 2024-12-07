@@ -98,6 +98,16 @@ footer {
 
 /*------------------------------------------------------------------*/
 
+@media(max-width: 768px) {
+    footer {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
 @media(max-width: 425px) {
     footer {
         .galery {
@@ -109,7 +119,6 @@ footer {
         }
 
         .container {
-            padding: 0 $gutterM;
             text-align: center;
 
             .content {

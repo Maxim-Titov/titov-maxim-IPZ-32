@@ -121,17 +121,49 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
     #blog {
         .container {
             padding: 0 $gutterM;
+            
+            .block {
+                &-content {
+                    .left-block {
+                        width: 70%;
+                        padding-right: $gutterS;
+                    }
 
+                    .right-block {
+                        width: 30%;
+                        padding-left: $gutterS;
+                    }
+                }
+
+                &-footer {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #blog {
+        .container {
             .block {
                 &-header {
                     display: block;
 
                     form {
                         position: relative;
+                    }
+
+                    .block-title {
+                        .title {
+                            width: auto;
+                        }
                     }
                 }
 

@@ -65,7 +65,7 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 425px) {
+@media(max-width: 768px) {
     #get-started {
         padding: 100px 0 $gutter 0;
 
@@ -80,14 +80,40 @@
 
             .left-block {
                 margin-bottom: 50px;
+                text-align: center;
+
+                .title {
+                    width: auto;
+                }
             }
 
             .right-block {
+                text-align: center;
                 display: block;
 
                 p {
                     width: auto;
                 }
+
+                svg {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #get-started {
+        .container {
+            .left-block {
+                text-align: left;
+            }
+            
+            .right-block {
+                text-align: left;
 
                 svg {
                     width: 100%;
