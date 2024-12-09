@@ -53,9 +53,15 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  header .container {
+    padding: 20px;
+  }
+}
+/*------------------------------------------------------------------*/
 @media (max-width: 768px) {
   header .container {
-    padding: 20px 20px !important;
+    padding: 20px !important;
   }
   header .container .menu, header .container .contact {
     display: none;
@@ -200,9 +206,14 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #hero .container {
     padding: 50px 20px;
+  }
+}
+/*------------------------------------------------------------------*/
+@media (max-width: 768px) {
+  #hero .container {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -339,7 +350,7 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #service .container {
     padding: 0 20px;
   }
@@ -433,7 +444,7 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #portfolio .container .content .left .block-content, #portfolio .container .content .center .block-content, #portfolio .container .content .right .block-content {
     left: 30px;
     bottom: 40px;
@@ -548,10 +559,13 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #gabriel-pires .container {
     padding: 0 20px;
   }
+}
+/*------------------------------------------------------------------*/
+@media (max-width: 768px) {
   #gabriel-pires .container .content .left-block, #gabriel-pires .container .content .right-block {
     width: 50%;
   }
@@ -637,7 +651,7 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   #features .container {
     padding: 0 20px;
   }
@@ -718,12 +732,17 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  #get-started .container {
+    padding: 0 20px;
+  }
+}
+/*------------------------------------------------------------------*/
 @media (max-width: 768px) {
   #get-started {
     padding: 100px 0 30px 0;
   }
   #get-started .container {
-    padding: 0 20px;
     display: block;
   }
   #get-started .container .price-icon {
@@ -843,6 +862,24 @@ header .container .hamburger-menu {
   background-color: rgba(179, 176, 186, 0.5);
 }
 
+/*------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  #testimonials .container {
+    padding: 0 20px;
+  }
+  #testimonials .container .content > div {
+    padding: 20px 0 20px 20px;
+  }
+  #testimonials .container .content > div > p {
+    width: auto;
+  }
+  #testimonials .container .content .left-block {
+    height: auto;
+  }
+  #testimonials .container .content .right-block {
+    height: auto;
+  }
+}
 /*------------------------------------------------------------------*/
 @media (max-width: 768px) {
   #testimonials .container {
@@ -967,12 +1004,18 @@ header .container .hamburger-menu {
 }
 
 /*------------------------------------------------------------------*/
+@media (max-width: 1024px) {
+  #faq .container {
+    padding: 0 20px;
+  }
+  #faq .container .content .right-block .accordion {
+    width: auto;
+  }
+}
+/*------------------------------------------------------------------*/
 @media (max-width: 768px) {
   #faq {
     padding-top: 100px;
-  }
-  #faq .container {
-    padding: 0 20px;
   }
   #faq .container .content {
     display: block;
@@ -1410,11 +1453,28 @@ footer .container .content .center-block nav ul li a {
   color: #fff;
   text-decoration: none;
 }
+footer .container .content .right-block {
+  display: flex;
+}
 footer .container .content .right-block a {
   text-decoration: none;
 }
-footer .container .content .right-block a svg {
+footer .container .content .right-block a .social {
+  position: relative;
+}
+footer .container .content .right-block a .social svg {
   margin-right: 5px;
+}
+footer .container .content .right-block a .social svg:last-child {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+}
+footer .container .content .right-block a .social:hover svg:first-child > * {
+  fill: #ff5352;
+}
+footer .container .content .right-block a:first-child .social svg:last-child {
+  left: 18px;
 }
 footer .container .copyright {
   display: flex;

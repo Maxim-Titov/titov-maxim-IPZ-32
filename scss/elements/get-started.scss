@@ -65,12 +65,21 @@
 
 /*------------------------------------------------------------------*/
 
+@media(max-width: 1024px) {
+    #get-started {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
 @media(max-width: 768px) {
     #get-started {
         padding: 100px 0 $gutter 0;
 
         .container {
-            padding: 0 $gutterM;
             display: block;
 
             .price-icon {

@@ -104,11 +104,19 @@
 
 /*------------------------------------------------------------------*/
 
-@media(max-width: 768px) {
+@media(max-width: 1024px) {
     #gabriel-pires {
         .container {
             padding: 0 $gutterM;
+        }
+    }
+}
 
+/*------------------------------------------------------------------*/
+
+@media(max-width: 768px) {
+    #gabriel-pires {
+        .container {
             .content {
                 .left-block, .right-block {
                     width: 50%;

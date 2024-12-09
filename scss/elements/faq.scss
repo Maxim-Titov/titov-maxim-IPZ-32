@@ -109,13 +109,29 @@
 
 /*------------------------------------------------------------------*/
 
+@media(max-width: 1024px) {
+    #faq {
+        .container {
+            padding: 0 $gutterM;
+
+            .content {
+                .right-block {
+                    .accordion {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
 @media(max-width: 768px) {
     #faq {
         padding-top: 100px;
 
         .container {
-            padding: 0 $gutterM;
-
             .content {
                 display: block;
 

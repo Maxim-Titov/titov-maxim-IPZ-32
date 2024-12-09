@@ -47,11 +47,43 @@ footer {
             }
 
             .right-block {
+                display: flex;
+
                 a {
                     text-decoration: none;
 
-                    svg {
-                        margin-right: 5px;
+                    .social {
+                        position: relative;
+
+                        svg {
+                            margin-right: 5px;
+
+                            &:last-child {
+                                position: absolute;
+                                top: 16px;
+                                left: 16px;
+                            }
+                        }
+
+                        &:hover {
+                            svg {
+                                &:first-child {
+                                    & > * {
+                                        fill: $red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        .social {
+                            svg {
+                                &:last-child {
+                                    left: 18px;
+                                }
+                            }
+                        }
                     }
                 }
             }

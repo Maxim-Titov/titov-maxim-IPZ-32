@@ -69,10 +69,20 @@ header {
 
 /*------------------------------------------------------------------*/
 
+@media(max-width: 1024px) {
+    header {
+        .container {
+            padding: $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
 @media(max-width: 768px) {
     header {
         .container {
-            padding: $gutterM 20px !important;
+            padding: $gutterM !important;
 
             .menu, .contact {
                 display: none;
