@@ -1,17 +1,139 @@
 @import '../global/variables.scss';
 
-.service {
-    background-image: url(../images/header-bg.png);
-    color: white;
-    padding: 125px 0;
-    text-align: center;
+#service {
+    background-color: $pink-light;
+    padding: 100px 0;
 
-    &-block {
-        width: 670px;
+    .container {
         margin: 0 auto;
 
-        h1 {
-            font-size: 50px;
+        .title, .sub-title {
+            text-align: center;
+        }
+
+        .sub-title {
+            margin-bottom: $gutter;
+        }
+
+        .title {
+            color: $brown;
+            width: 425px;
+            margin: 0 auto;
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+            padding: 80px 0;
+
+            .left-block, .right-block {
+                padding: 50px 50px $gutter 50px;
+
+                .block-title {
+                    display: flex;
+                    align-items: center;
+
+                    svg {
+                        margin-right: $gutterM;
+                    }
+
+                    h4 {
+                        color: $brown;
+                    }
+                }
+
+                .content-block {
+                    margin: $gutter 0;
+                }
+
+                .more {
+                    display: flex;
+
+                    form {
+                        button {
+                            margin-right: $gutterS;
+                            border: none;
+                            border-radius: 100%;
+                            background-color: $white;
+                            color: $red;
+                            width: 48px;
+                            height: 48px;
+                            font-size: 25px;
+                        }
+                    }
+
+                    a {
+                        color: $brown;
+                        text-decoration: none;
+                        padding-top: 11px;
+                    }
+                }
+            }
+
+            .left-block {
+                border: 1px solid $pink;
+            }
+
+            .right-block {
+                border-top: 1px solid $pink;
+                border-right: 1px solid $pink;
+                border-bottom: 1px solid $pink;
+            }
+        }
+
+        .explore-more {
+            display: flex;
+            
+            p {
+                margin-left: auto;
+                margin-right: $gutterS;
+            }
+            
+            a {
+                margin-right: auto;
+                color: $brown;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    #service {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #service {
+        .container {
+            .sub-title {
+                margin: 0 0 $gutterS 0;
+            }
+
+            .title {
+                width: 100%;
+            }
+
+            .content {
+                display: block;
+                padding: $gutter 0;
+
+                .left-block, .right-block {
+                    padding: 25px;
+                }
+
+                .right-block {
+                    border-top: none;
+                    border-left: 1px solid $pink;
+                }
+            }
         }
     }
 }

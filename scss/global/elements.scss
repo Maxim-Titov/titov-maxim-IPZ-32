@@ -1,26 +1,129 @@
-body, html {
-    padding: 0;
+@import 'variables.scss';
+
+html, body {
     margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 88px;
 }
 
 body {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    overflow-y: scroll;
+    background-color: $purple;
 }
 
 * {
     box-sizing: border-box;
 }
 
-a {
-    color: black;
-    text-decoration: none;
+.container {
+    max-width: $desktopL;
+}
 
-    &:hover {
-        color: $dark-blue;
-    }
+p {
+    margin: 0;
+}
+
+.sub-title {
+    color: $red-dark;
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+h1 {
+    font-size: 72px;
+    letter-spacing: -2px;
+    line-height: 80px;
 }
 
 h2 {
-    font-size: 42px;
+    font-size: 56px;
+    letter-spacing: -1px;
+    line-height: 64px;
+}
+
+h3 {
+    font-size: 40px;
+    letter-spacing: 0;
+    line-height: 48px;
+}
+
+h4 {
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 32px;
+}
+
+h5 {
+    font-size: 16px;
+    letter-spacing: 3px;
+    line-height: 32px;
+}
+
+/*-JS---------------------------------------------------------------*/
+
+.error {
+    outline-color: #f06767;
+    box-shadow: inset 0 0 10px 1px #f06767;
+    border: none;
+}
+
+.subscribe input::placeholder {
+    color: #f06767;
+    padding-left: 15px;
+    font-style: italic;
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: $desktopL) {
+    #portfolio,
+    #blog,
+    footer {
+        img {
+            width: 100%;
+        }
+    }
+
+    #hero,
+    #gabriel-pires,
+    #gabriel-pires-2 {
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    #features {
+        .container {
+            .right-block {
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    h1 {
+        font-size: 49px;
+        letter-spacing: -1px;
+        line-height: 60px;
+    }
+    
+    h2 {
+        font-size: 38px;
+        letter-spacing: 0;
+        line-height: 48px;
+    }
 }

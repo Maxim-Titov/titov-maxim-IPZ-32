@@ -1,87 +1,201 @@
 @import '../global/variables.scss';
+@import '../global/mixin.scss';
 
 footer {
-    width: 100%;
-    background-color: $second-back-color;
-
-    .footer {
-        width: 1170px;
-        margin: 0 auto;
-        color: $white;
+    .galery {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            margin: 0;
+        }
+    }
 
-        div {
-            .title {
-                span {
-                    color: $dark-blue;
+    .container {
+        margin: 0 auto;
+
+        .content {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $gray-dark;
+            padding: 100px 0 50px 0;
+
+            .left-block {
+                h4 {
+                    color: $white;
                 }
             }
 
-            .contacts {
-                a {
-                    color: gray;
+            .center-block {
+                width: 405px;
+                display: flex;
+                justify-content: space-between;
 
-                    &:hover {
-                        color: $dark-blue;
-                    }
-                }
-            }
+                nav {
+                    ul {
+                        @include li-reset;
 
-            .links {
-                svg {
-                    .back {
-                        fill: $gray;
-                        fill-opacity: 0.1;
-                    }
-
-                    g {
-                        & > path {
-                            fill: $white;
+                        li {
+                            a {
+                                color: $white;
+                                text-decoration: none;
+                            }
                         }
                     }
+                }
+            }
 
-                    &:hover {
-                        g {
-                            & > path {
-                                fill: $white;
+            .right-block {
+                display: flex;
+
+                a {
+                    text-decoration: none;
+
+                    .social {
+                        position: relative;
+
+                        svg {
+                            margin-right: 5px;
+
+                            &:last-child {
+                                position: absolute;
+                                top: 16px;
+                                left: 16px;
                             }
                         }
 
-                        .back {
-                            fill: $blue;
-                            fill-opacity: 1;
+                        &:hover {
+                            svg {
+                                &:first-child {
+                                    & > * {
+                                        fill: $red;
+                                    }
+                                }
+                            }
+                        }
+                    }
+
+                    &:first-child {
+                        .social {
+                            svg {
+                                &:last-child {
+                                    left: 18px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .copyright {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px 0;
+            
+            .left-block {
+                p {
+                    color: $gray;
+                }
+            }
+
+            .right-block {
+                a {
+                    color: $white;
+                    text-decoration: none;
+
+                    &:last-child {
+                        margin-left: 80px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    footer {
+        .galery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 768px) {
+    footer {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    footer {
+        .galery {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-column-gap: 0;
+            grid-row-gap: 0;
+        }
+
+        .container {
+            text-align: center;
+
+            .content {
+                display: block;
+
+                & > div {
+                    margin-bottom: 50px;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+
+                .center-block {
+                    width: auto;
+                    display: block;
+
+                    & > div {
+                        margin-bottom: 50px;
+
+                        &:last-child {
+                            margin-bottom: 0;
                         }
                     }
                 }
             }
 
-            form {
-                input {
-                    width: 350px;
-                    height: 3lh;
-                    border: 1px solid gray;
-                    border-radius: 5px;
-                    background-color: $black-with-zero-opacity;
-                    color: gray;
-                    padding-left: 10px;
-                    font-size: 15px;
+            .copyright {
+                display: block;
+
+                .left-block {
+                    p {
+                        width: 198px;
+                        margin: 0 auto;
+                    }
                 }
 
-                button {
-                    width: 200px;
-                    height: 3lh;
-                    background-color: $blue;
-                    border: none;
-                    border-radius: 5px;
-                    color: white;
-                    font-weight: bold;
-                    margin-left: 15px;
-                    font-size: 15px;
+                .right-block {
+                    display: flex;
+                    justify-content: space-around;
 
-                    &:hover {
-                        cursor: pointer;
-                        background-color: $middle-dark-blue;
+                    a {
+                        &:last-child {
+                            margin-left: 0;
+                        }
                     }
                 }
             }

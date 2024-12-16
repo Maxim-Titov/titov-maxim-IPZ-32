@@ -1,0 +1,166 @@
+@import '../global/variables.scss';
+
+#faq {
+    padding: 150px 0 75px 0;
+
+    .container {
+        margin: 0 auto;
+
+        .content {
+            margin-bottom: 100px;
+            display: flex;
+            justify-content: space-between;
+
+            .left-block {
+                .sub-title {
+                    margin-bottom: $gutter;
+                }
+    
+                .title {
+                    color: $white;
+                    width: 371px;
+                    margin-bottom: $gutter;
+                }
+    
+                .content {
+                    color: $gray;
+                    width: 470px;
+                    margin-bottom: $gutter;
+                }
+    
+                .contact {
+                    color: $white;
+                    text-decoration: none;
+                }
+            }
+    
+            .right-block {
+                .accordion {
+                    width: 570px;
+                    margin: 0 auto;
+                    color: $white;
+                    border-radius: 7px;
+                    overflow: hidden;
+    
+                    &-item {
+                        border: 1px solid $gray-dark;
+                    }
+    
+                    &-header {
+                        background-color: rgba($white, 0);
+                        color: $white;
+                        padding: 15px;
+                        font-size: 24px;
+                        line-height: 32px;
+                        width: 100%;
+                        text-align: left;
+                        border: none;
+                        outline: none;
+                        cursor: pointer;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-weight: bold;
+                        padding: $gutter 50px;
+    
+                        &:hover {
+                            background-color: $white;
+                            color: $brown;
+                        }
+    
+                        &.active {
+                            background-color: $white;
+                            color: $brown;
+    
+                            .accordion-icon {
+                                transform: rotate(180deg);
+                            }
+                        }
+                    }
+    
+                    &-icon {
+                        transform: rotate(0deg);
+                        transition: transform 0.3s;
+                        border-radius: 100%;
+                        width: 32px;
+                        height: 32px;
+                    }
+    
+                    &-content {
+                        padding: 15px;
+                        display: none;
+                        background-color: $white;
+                        color: $pink-dark;
+                        padding: 0 50px $gutter 50px;
+    
+                        p {
+                            margin: 0;
+                        }
+                    }
+                }            
+            }
+        }
+
+        .faq-slider {
+            height: 47px;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    #faq {
+        .container {
+            padding: 0 $gutterM;
+
+            .content {
+                .right-block {
+                    .accordion {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 768px) {
+    #faq {
+        padding-top: 100px;
+
+        .container {
+            .content {
+                display: block;
+
+                .right-block {
+                    .accordion {
+                        width: 100%;
+
+                        &-header, &-content {
+                            padding: $gutterM;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #faq {
+        .container {
+            .content {
+                .left-block {
+                    .title, .content {
+                        width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

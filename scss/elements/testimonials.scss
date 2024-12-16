@@ -1,0 +1,179 @@
+@import '../global/variables.scss';
+
+#testimonials {
+    padding: 100px 0 75px 0;
+    background-color: $pink-light;
+
+    .container {
+        margin: 0 auto;
+        text-align: center;
+
+        .title {
+            margin: 25px auto 0 auto;
+            color: $brown;
+            width: 394px;
+        }
+
+        .content {
+            margin: 75px 0;
+            display: flex;
+            justify-content: center;
+
+            & > div {
+                width: 33.33%;
+                padding: 50px 0 50px 50px;
+                text-align: left;
+
+                .star {
+                    margin-bottom: 32.5px;
+                }
+
+                & > p {
+                    margin-bottom: 70px;
+                    width: 295px;
+                }
+
+                .client {
+                    display: flex;
+
+                    img {
+                        border-radius: 50%;
+                        height: 80px;
+                    }
+
+                    .about {
+                        padding-left: 25px;
+                        
+                        p {
+                            &:first-child {
+                                font-size: 24px;
+                                line-height: 32px;
+                                color: $brown;
+                                font-weight: bold;
+                            }
+
+                            &:last-child {
+                                color: $brown;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: $white;
+                }
+            }
+
+            .left-block {
+                border-top: 1px solid $pink;
+                border-bottom: 1px solid $pink;
+                border-left: 1px solid $pink;
+                height: 432px;
+            }
+
+            .center-block {
+                border: 1px solid $pink;
+            }
+
+            .right-block {
+                border-top: 1px solid $pink;
+                border-bottom: 1px solid $pink;
+                border-right: 1px solid $pink;
+                height: 400px;
+            }
+        }
+
+        form {
+            button {
+                width: 138px;
+                height: 48px;
+                background-color: $white;
+                border: none;
+                border-radius: 7px;
+                color: $brown;
+                font-weight: bold;
+                font-size: 14px;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: rgba($gray, 0.5);
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    #testimonials {
+        .container {
+            padding: 0 $gutterM;
+
+            .content {
+                & > div {
+                    padding: $gutterM 0 $gutterM $gutterM;
+
+                    & > p {
+                        width: auto;
+                    }
+                }
+
+                .left-block {
+                    height: auto;
+                }
+
+                .right-block {
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 768px) {
+    #testimonials {
+        .container {
+            padding: 0 $gutterM;
+
+            .title {
+                width: auto;
+            }
+
+            .content {
+                display: block;
+                margin: $gutter 0 50px 0;
+
+                & > div {
+                    width: 100%;
+                    height: auto !important;
+                    padding: 50px $gutter;
+
+                    p {
+                        width: auto;
+                    }
+                }
+
+                .left-block {
+                    border-top: 1px solid $pink;
+                    border-bottom: none;
+                    border-left: 1px solid $pink;
+                    border-right: 1px solid $pink;
+                }
+    
+                .center-block {
+                    border: 1px solid $pink;
+                }
+    
+                .right-block {
+                    border-top: none;
+                    border-bottom: 1px solid $pink;
+                    border-right: 1px solid $pink;
+                    border-left: 1px solid $pink;
+                }
+            }
+        }
+    }
+}

@@ -1,10 +1,27 @@
-$blue: #2196F3;
-$middle-dark-blue: rgb(75, 75, 255);
-$dark-blue: rgb(125, 125, 255);
-$main-back-color: #F5F4FA;
-$second-back-color: #2F303A;
-$black-with-zero-opacity: rgba(0, 0, 0, 0);
-$gray-with-opacity: rgba(89, 89, 97, 0.8);
-$gray: #afb0b8;
+// Colors
+$black: #363744;
 $white: #fff;
-$black: #000000;
+$gray: #b3b0ba;
+$gray-dark: #3d3556;
+$purple: #2b233e;
+$red-dark: #d94b4f;
+$red: #ff5352;
+$red-light: #EF6D58;
+$brown-light: #85695c;
+$brown: #391400;
+$pink: #fbd0be;
+$pink-light: #fff0e9;
+$pink-dark: #93705e;
+$pink-light-dark: #F9E5DA;
+
+// Gutters
+$gutter: 30px;
+$gutterM: 20px;
+$gutterS: 10px;
+
+// Sizes
+$mobile: 480px;
+$table: 720px;
+$desktop: 1160px;
+$desktopL: 1220px;
+$desktopXL: 1440px;

@@ -1,0 +1,97 @@
+@import '../global/variables.scss';
+
+#features {
+    padding: 150px 0;
+
+    .container {
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .left-block {
+            & > * {
+                margin-bottom: $gutterM;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+
+            .title {
+                color: $white;
+                width: 397px;
+            }
+
+            .content {
+                font-size: 20px;
+                line-height: 32px;
+                color: $white;
+                width: 470px;
+            }
+
+            .check-block {
+                &-content {
+                    display: flex;
+                    margin-bottom: 15px;
+
+                    svg {
+                        margin-right: 15px;
+                    }
+
+                    p {
+                        color: $gray;
+                        padding-top: 2px;
+                    }
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    #features {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #features {
+        padding: 75px 0 150px 0;
+
+        .container {
+            flex-direction: column;
+            
+            .left-block {
+                order: 2;
+                
+                .title {
+                    width: auto;
+                }
+
+                .content {
+                    width: auto;
+                }
+            }
+
+            .right-block {
+                order: 1;
+
+                svg {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

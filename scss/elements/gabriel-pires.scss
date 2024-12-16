@@ -1,0 +1,183 @@
+@import '../global/variables.scss';
+
+#gabriel-pires {
+    background-color: $pink-light;
+    padding: 175px 0 125px 0;
+
+    .container {
+        margin: 0 auto;
+        
+        .content {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 150px;
+
+            .left-block, .right-block {
+                width: 40%;
+            }
+
+            .right-block {
+                padding-right: $gutterS;
+                padding-top: 60px;
+
+                .sub-title {
+                    margin-bottom: $gutter;
+                }
+
+                .title {
+                    margin: $gutter 0;
+                    color: $brown;
+                }
+
+                .about-me-title {
+                    margin: $gutter 0;
+                    color: $brown;
+                    font-size: 20px;
+                    line-height: 32px;
+                }
+
+                form {
+                    button {
+                        margin-top: $gutter;
+                        border: none;
+                        border-radius: 7px;
+                        width: 138px;
+                        height: 48px;
+                        background-color: $white;
+                        color: $brown;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        font-size: 14px;
+                        cursor: pointer;
+
+                        &:hover {
+                            background-color: rgba($gray, 0.5);
+                        }
+                    }
+                }
+            }
+        }
+
+        .my-statistic {
+            display: flex;
+            justify-content: center;
+
+            .left-block, .right-block {
+                width: 50%;
+                display: flex;
+                padding: $gutter 50px;
+
+                svg {
+                    margin-right: $gutter;
+                }
+
+                .static {
+                    .num {
+                        font-size: 40px;
+                        line-height: 48px;
+                        font-weight: bold;
+                        color: $brown;
+                        margin-top: $gutterS;
+                    }
+
+                    .desc {
+                        font-size: 20px;
+                        line-height: 32px;
+                        color: $brown;
+                        margin-top: 15px;
+                    }
+                }
+            }
+
+            .left-block {
+                border: 1px solid $pink;
+            }
+
+            .right-block {
+                border-top: 1px solid $pink;
+                border-right: 1px solid $pink;
+                border-bottom: 1px solid $pink;
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    #gabriel-pires {
+        .container {
+            padding: 0 $gutterM;
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 768px) {
+    #gabriel-pires {
+        .container {
+            .content {
+                .left-block, .right-block {
+                    width: 50%;
+                }
+
+                .left-block {
+                    padding-right: $gutterM;
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #gabriel-pires {
+        padding: 100px 0 100px 0;
+
+        .container {
+            .content {
+                display: block;
+                margin-bottom: 100px;
+
+                .left-block, .right-block {
+                    width: 100%;
+                }
+
+                .left-block {
+                    svg {
+                        width: 100%;
+                        height: auto;
+                    }
+                }
+            }
+
+            .my-statistic {
+                display: block;
+
+                .left-block, .right-block {
+                    width: 100%;
+                    padding: $gutter $gutterM;
+
+                    svg, .static {
+                        width: 50%;
+                    }
+
+                    svg {
+                        margin: 0;
+                    }
+
+                    .static {
+                        padding-left: $gutterS;
+                    }
+                }
+
+                .right-block {
+                    border-top: none;
+                    border-left: 1px solid $pink;
+                }
+            }
+        }
+    }
+}

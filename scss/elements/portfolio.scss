@@ -1,0 +1,154 @@
+@import '../global/variables.scss';
+
+#portfolio {
+    padding: 100px 0 75px 0;
+
+    .container {
+        margin: 0 auto;
+
+        .head {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 $gutterM 75px $gutterM;
+
+            .title-block {
+                .title {
+                    margin-top: $gutterM;
+                    color: $white;
+                }
+            }
+
+            form {
+                button {
+                    width: 138px;
+                    height: 48px;
+                    background-color: rgba($white, 0);
+                    border: 1px solid $gray;
+                    border-radius: 7px;
+                    color: $white;
+                    font-size: 14px;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    margin-top: 30px;
+
+                    &:hover {
+                        background-color: rgba($gray, 0.5);
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: flex;
+            justify-content: center;
+
+            .left, .center, .right {
+                padding: 15px;
+                border: 1px solid $gray-dark;
+                position: relative;
+                
+                .block-content {
+                    position: absolute;
+                    left: 60px;
+                    bottom: 50px;
+
+                    .back {
+                        padding: 5px 10px;
+                        border-radius: 25px;
+                        background-color: $white;
+                        text-align: center;
+
+                        p {
+                            color: $brown;
+                        }
+                    }
+
+                    h3 {
+                        color: $white;
+                        margin-top: 25px;
+                    }
+                }
+            }
+
+            .left {
+                .block-content {
+                    .back {
+                        width: 84px;
+                    }
+                }
+            }
+
+            .center {
+                .block-content {
+                    .back {
+                        width: 102px;
+                    }
+                }
+            }
+
+            .right {
+                .block-content {
+                    .back {
+                        width: 116px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 1024px) {
+    #portfolio {
+        .container {
+            .content {
+                .left, .center, .right {
+                    .block-content {
+                        left: $gutter;
+                        bottom: 40px;    
+
+                        h3 {
+                            margin-top: $gutterS;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*------------------------------------------------------------------*/
+
+@media(max-width: 425px) {
+    #portfolio {
+        padding: 75px 0 50px 0;
+
+        .container {
+            .head {
+                display: block;
+                padding: 0 $gutterM 50px $gutterM;
+            }
+
+            .content {
+                display: block;
+
+                .left, .center, .right {
+                    img {
+                        width: 100%;   
+                    }
+
+                    .block-content {
+                        left: 40px;
+                        bottom: 40px;    
+
+                        h3 {
+                            margin-top: $gutterS;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

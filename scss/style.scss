@@ -1,13 +1,18 @@
-// Elements
+// Elemenmts
 @import 'elements/header.scss';
-@import 'elements/menu.scss';
-@import 'elements/description.scss';
-@import 'elements/about-us.scss';
-@import 'elements/our-team.scss';
+@import 'elements/hero.scss';
 @import 'elements/service.scss';
+@import 'elements/portfolio.scss';
+@import 'elements/gabriel-pires.scss';
+@import 'elements/features.scss';
+@import 'elements/get-started.scss';
+@import 'elements/testimonials.scss';
+@import 'elements/faq.scss';
+@import 'elements/blog.scss';
+@import 'elements/contact.scss';
+@import 'elements/gabriel-pires-2.scss';
 @import 'elements/footer.scss';
-@import 'elements/message.scss';
 
 // Global
-@import 'global/elements.scss';
 @import 'global/global.scss';
+@import 'global/elements.scss';
